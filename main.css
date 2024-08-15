@@ -1,0 +1,230 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+   body{
+    background-color: rgb(71, 71, 221);
+  
+  
+   }
+   .box3{
+    width: 1200px;
+    height: 1000px;
+
+    margin: 0 auto;
+    display: flex;
+   }
+
+   .box1{
+    width: 700px;
+    height: 700px ;
+    position: absolute;
+    right: 380px;
+
+  
+   }
+  .box2{
+    width: 450px;
+    height: 500px;
+   margin-top: 45px;
+   margin-left: 45px;
+
+ 
+  
+  }
+  #cake {
+    display: block;
+    position: relative;
+    margin: -10em auto 0 auto;
+  }
+  
+  /* ============================================== Candle
+  */
+  
+  .velas {
+    background: #ffffff;
+    border-radius: 10px;
+    position: absolute;
+    top: 218px;
+    left: 50%;
+    margin-left: -2.4px;
+    margin-top: -8.33333333px;
+    width: 5px;
+    height: 35px;
+    transform: translateY(-300px);
+    backface-visibility: hidden;
+    animation: in 500ms 6s ease-out forwards;
+  }
+  .velas:after,
+  .velas:before {
+    background: rgba(255, 0, 0, 0.4);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2.22222222px;
+  }
+  .velas:after {
+    top: 25%;
+    left: 0;
+  }
+  .velas:before {
+    top: 45%;
+    left: 0;
+  }
+  
+  /* ============================================== Fire
+  */
+  
+  .fuego {
+    border-radius: 100%;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -2.6px;
+    width: 6.66666667px;
+    height: 18px;
+  }
+  .fuego:nth-child(1) {
+    animation: fuego 2s 6.5s infinite;
+  }
+  .fuego:nth-child(2) {
+    animation: fuego 1.5s 6.5s infinite;
+  }
+  .fuego:nth-child(3) {
+    animation: fuego 1s 6.5s infinite;
+  }
+  .fuego:nth-child(4) {
+    animation: fuego 0.5s 6.5s infinite;
+  }
+  .fuego:nth-child(5) {
+    animation: fuego 0.2s 6.5s infinite;
+  }
+  
+  /* ============================================== Animation Fire
+  */
+  
+  @keyframes fuego {
+    0%, 100% {
+      background: rgba(254, 248, 97, 0.5);
+      box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      background: rgba(255, 50, 0, 0.1);
+      box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+      transform: translateY(-20px) scale(0);
+    }
+  }
+  
+  @keyframes in {
+    to {
+      transform: translateY(0);
+    }
+  }
+  .box{
+    width: 300px;
+    height: 200px;
+   margin-left:200px;
+  }
+  .text {
+    
+    color:yellow;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-style:italic;
+    text-align: center;
+    h1 {
+      font-size: 1.4em;
+    }
+  }  
+  .box4{
+    width: 500px;
+    height: 500px;
+  
+    position: absolute;
+    bottom: 10px;
+  }
+  
+  .foto{
+     background-image: url(./imeg/Immagine\ WhatsApp\ 2024-08-14\ ore\ 17.18.50_8037aee3.jpg);
+     background-size: 400px 400px; 
+
+     background-repeat: no-repeat;
+     height: 100vh; /* Altezza del contenitore */
+     /* width: 100%; */
+     height: 400px;
+     width: 400px;
+     border: solid 2px yellow;
+     border-radius: 30px;
+   
+  }
+  .background-heart {
+    width: 500px;
+    height: 500px;
+    /* height: 100vh; */
+    margin-top: 80px;
+
+    animation:pulseBackground 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite alternate;
+  }
+  
+  .message {
+    font-family: 'Pacifico', cursive;
+    text-align:center;
+    font-size:2em;
+    color: yellow;
+   
+  }
+  
+  .heart {
+      z-index:2;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: red;
+      height: 50px;
+      width: 50px;
+      animation:pulse 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite alternate;
+    }
+    .heart::after {
+      background-color: red;
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 0px;
+      left: 25px;
+    }
+    .heart::before {
+      content:"";
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: -25px;
+      left: 0px;
+    }
+    
+    @keyframes pulse {
+      0% {
+        transform:rotate(-45deg) scale(1.0);
+      }
+      100% {
+        transform:rotate(-45deg) scale(2.0) ;
+      }
+    }
+  
+  @keyframes pulseBackground {
+    0% {
+        background-color:rgb(71, 71, 221);
+      }
+      100% {
+         background-color:rgb(71, 71, 221);
+      }
+  }
+   
